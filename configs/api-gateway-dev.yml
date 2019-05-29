@@ -11,4 +11,4 @@ zuul:
       path: /inventory/**
       serviceId: inventory-service
 
-health-check.enabled: false
+health-check.enabled: true
