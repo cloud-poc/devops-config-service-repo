@@ -1,18 +1,19 @@
 version: "3"
 services:
-  config-server-1:
+  config-service-1:
     image: akjamie/cloud-config-service:1.0.0
+    container_name: config-server-node1
     environment:
-      CONFIG_REPOSITORY_URL: https://github.com/cloud-poc/devops-config-service-repo
-      EUREKA_CLIENT_SERVICE_URL: http://localhost:8761/eureka
+      - CONFIG_REPOSITORY_URL=https://github.com/cloud-poc/devops-config-service-repo
+      - EUREKA_CLIENT_SERVICE_URL=http://service-registry-node1:8761/eureka
     ports:
       - 8888:8888
   
-  config-server-2:
+  config-service-2:
     image: akjamie/cloud-config-service:1.0.0
+    container_name: config-server-node2
     environment:
-      CONFIG_REPOSITORY_URL: https://github.com/cloud-poc/devops-config-service-repo
-      EUREKA_CLIENT_SERVICE_URL: http://localhost:8761/eureka
+      - CONFIG_REPOSITORY_URL=https://github.com/cloud-poc/devops-config-service-repo
+      - EUREKA_CLIENT_SERVICE_URL=http://service-registry-node2:8761/eureka
     ports:
       - 8889:8888
-    
