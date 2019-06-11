@@ -1,0 +1,17 @@
+version: "3"
+services:
+  api-gatewaty-1:
+    image: akjamie/cloud-api-gateway:1.0.0
+    container_name: api-gatewaty-node1
+    environment:
+      - CONFIG_DISCOVERY_ENABLED=true
+      - CONFIG_DISCOVERY_SERVICE_ID=config-service
+      - CONFIG_SERVICE_URL=http://config-service:8888
+      - EUREKA_CLIENT_SERVICE_URL=http://service-registry-node1:8761/eureka
+      - ZIPKIN_BASE_URL=http://zipkin:9411
+      - BUS_RABBITMQ_HOST=rabbitmq-server
+      - BUS_RABBITMQ_PORT=5672
+      - BUS_RABBITMQ_USERNAME=guest
+      - BUS_RABBITMQ_PASSWORD=guest
+    ports:
+      - 8080:8080
