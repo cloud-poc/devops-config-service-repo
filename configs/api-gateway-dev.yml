@@ -1,5 +1,5 @@
 zuul:
-  prefix: /proxy
+  prefix: /
   retryable: true
   sensitive-headers: Authorization, Cookie, Set-Cookie
   ignored-services: '*'
@@ -18,3 +18,8 @@ health-check.enabled: true
 spring.sleuth.sampler.probability: 1
 eureka.client.service-url:
   defaultZone: ${EUREKA_CLIENT_SERVICE_URL:http://localhost:8761/eureka/}
+
+zuul.filter:
+  authFilter:
+    enabled: true
+    headers: Authorization
