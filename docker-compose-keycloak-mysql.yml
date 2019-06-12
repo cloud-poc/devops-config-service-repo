@@ -15,7 +15,7 @@ services:
         MYSQL_USER: keycloak
         MYSQL_PASSWORD: keycloak
       ports:
-        - 3306:3306
+        - 13306:3306
   keycloak:
       image: jboss/keycloak
       environment:
