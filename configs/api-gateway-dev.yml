@@ -1,7 +1,7 @@
 zuul:
   prefix: /
   retryable: true
-  #sensitive-headers: Authorization, Cookie, Set-Cookie
+  sensitive-headers: Authorization, Cookie, Set-Cookie
   ignored-services: '*'
   routes:
     catalogservice:
