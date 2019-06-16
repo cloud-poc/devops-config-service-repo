@@ -21,3 +21,11 @@ security.oauth2.jwt.key-pair:
   store-pass: ${JWT_KEYPAIR_STOREPASS:Test1234}
   alias: ${JWT_KEYPAIR_ALIAS:internal-certs}
   file-path: ${JWT_KEYPAIR_PATH:keystore.p12}
+  
+swagger.api:
+  title: "Authorization Service"
+  description: "Custom oauth2 based authorization service for microservice"
+  terms-of-service-url: "https://oauth.net/2"
+  version: "v1.0.0"
+  controller:
+    base-package: "org.akj"
