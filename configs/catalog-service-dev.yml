@@ -25,6 +25,8 @@ spring:
 security:
   oauth2:
     resource:
-      jwt:
-        key-uri: http://localhost:8080/uaa/oauth/token_key
-      token-info-uri: /uaa/oauth/check_token
+      token-info-uri: http://localhost:8044/uaa/oauth/check_token
+      verifier-key.file-path: publicKey.pem
+    client:
+      client-id: client-2
+      client-secret: 123456
