@@ -28,5 +28,5 @@ security:
       token-info-uri: http://localhost:8044/uaa/oauth/check_token
       verifier-key.file-path: publicKey.pem
     client:
-      client-id: client2
+      client-id: client_2
       client-secret: 123456
