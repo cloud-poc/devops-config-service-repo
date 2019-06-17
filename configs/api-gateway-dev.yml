@@ -23,3 +23,12 @@ zuul.filter:
   authFilter:
     enabled: true
     headers: Authorization
+    
+security:
+  oauth2:
+    resource:
+      token-info-uri: ${SECURITY_OAUTH2_TOKEN_INFO_URL:http://localhost:8044/uaa/oauth/check_token}
+      verifier-key.file-path: ${SECURITY_OAUTH2_VERIFIER_KEY_PATH:publicKey.pem}
+    client:
+      client-id: ${SECURITY_OAUTH2_CLIENT_ID:client_2}
+      client-secret: ${SECURITY_OAUTH2_CLIENT_SECRET:123456}
