@@ -23,6 +23,7 @@ security.oauth2.jwt.key-pair:
   file-path: ${JWT_KEYPAIR_PATH:keystore.p12}
 
 swagger.api:
+  enabled: true
   title: "Authorization Service"
   description: "Custom oauth2 based authorization service for microservice"
   terms-of-service-url: "https://oauth.net/2"
