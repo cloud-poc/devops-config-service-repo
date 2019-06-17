@@ -29,3 +29,6 @@ swagger.api:
   version: "v1.0.0"
   controller:
     base-package: "org.akj"
+  contact:
+    name: "Jamie Zhang"
+    email: "akjamie.zhang@outlook.com"
