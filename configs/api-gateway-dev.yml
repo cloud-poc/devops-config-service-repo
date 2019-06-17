@@ -1,5 +1,5 @@
 zuul:
-  prefix: /api
+  prefix: /
   retryable: true
   sensitive-headers: Authorization, Cookie, Set-Cookie
   ignored-services: '*'
