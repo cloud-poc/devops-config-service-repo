@@ -20,3 +20,15 @@ spring:
     show-sql: true
     database-platform: org.hibernate.dialect.MySQL8Dialect
   sleuth.sampler.probability: 1
+
+swagger.api:
+  enabled: true
+  title: "Catalog Service"
+  description: "Sample Microservice - catalog service for demonstration purpose"
+  terms-of-service-url: "https://oauth.net/2"
+  version: "v1.0.0"
+  controller:
+    base-package: "org.akj"
+  contact:
+    name: "Jamie Zhang"
+    email: "akjamie.zhang@outlook.com"
