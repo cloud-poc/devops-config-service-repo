@@ -13,15 +13,22 @@ zuul:
     authorizationservice:
       path: /uua/**
       serviceId: authorization-service
+  host:
+    connect-timeout-millis: 30000
+    socket-timeout-millis: 30000
 
 hystrix:
   command:
     default:
       execution.isolation:
-        semaphore.maxConcurrentRequests: 50
+        semaphore:
+          maxConcurrentRequests: 50
         thread:
           timeoutInMilliseconds: 30000
 
+ribbon:
+  ReadTimeout: 29000
+  ConnectTimeout: 29000
 
 health-check.enabled: true
 spring.sleuth.sampler.probability: 1.0
