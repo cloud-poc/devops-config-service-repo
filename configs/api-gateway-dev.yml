@@ -24,11 +24,11 @@ hystrix:
         semaphore:
           maxConcurrentRequests: 50
         thread:
-          timeoutInMilliseconds: 30000
+          timeoutInMilliseconds: 10000
 
 ribbon:
-  ReadTimeout: 29000
-  ConnectTimeout: 29000
+  ReadTimeout: 3000
+  ConnectTimeout: 3000
 
 health-check.enabled: true
 spring.sleuth.sampler.probability: 1.0
