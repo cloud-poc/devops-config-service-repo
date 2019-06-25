@@ -1,0 +1,14 @@
+version: "3"
+services:
+  hystrix-dashboard:
+    image: akjamie/hystrix-dashboard:1.0.0
+    container_name: hystrix-dashboard
+    environment:
+      - CONFIG_REPOSITORY_URL=https://github.com/cloud-poc/devops-config-service-repo
+      - EUREKA_CLIENT_SERVICE_URL=http://service-registry-node1:8761/eureka
+      - RABBITMQ_HOST=rabbitmq-server
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=guest
+      - RABBITMQ_PASSWORD=guest
+    ports:
+      - 8989:8989
