@@ -13,18 +13,15 @@ zuul:
     authorizationservice:
       path: /uua/**
       serviceId: authorization-service
-  host:
-    connect-timeout-millis: 30000
-    socket-timeout-millis: 30000
 
 hystrix:
   command:
     default:
       execution.isolation:
         semaphore:
-          maxConcurrentRequests: 5
+          maxConcurrentRequests: 50
         thread:
-          timeoutInMilliseconds: 10000
+          timeoutInMilliseconds: 12000
 
 ribbon:
   ReadTimeout: 3000

@@ -6,6 +6,7 @@ services:
     environment:
       - CONFIG_REPOSITORY_URL=https://github.com/cloud-poc/devops-config-service-repo
       - EUREKA_CLIENT_SERVICE_URL=http://service-registry-node1:8761/eureka
+      - CONFIG_SERVICE_URL=http://config-service-1:8888
       - RABBITMQ_HOST=rabbitmq-server
       - RABBITMQ_PORT=5672
       - RABBITMQ_USERNAME=guest
