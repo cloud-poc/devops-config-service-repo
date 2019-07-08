@@ -40,7 +40,7 @@ zuul.filter:
 security:
   oauth2:
     resource:
-      token-info-uri: ${SECURITY_OAUTH2_TOKEN_INFO_URL:http://localhost:8044/uaa/oauth/check_token}
+      token-info-uri: ${SECURITY_OAUTH2_TOKEN_INFO_URL:http://localhost:8044/oauth/check_token}
       verifier-key.file-path: ${SECURITY_OAUTH2_VERIFIER_KEY_PATH:publicKey.pem}
     client:
       client-id: ${SECURITY_OAUTH2_CLIENT_ID:client_2}
